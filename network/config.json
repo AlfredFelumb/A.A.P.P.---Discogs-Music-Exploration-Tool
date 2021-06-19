@@ -1,7 +1,7 @@
 {
   "type": "network",
   "version": "1.0",
-  "data": "data.json",
+  "data": "classic openord.json",
   "logo": {
     "file": "",
     "link": "",
@@ -23,27 +23,32 @@
     "hoverBehavior": "default"
   },
   "informationPanel": {
-    "groupByEdgeDirection": true,
+    "groupByEdgeDirection": false,
     "imageAttribute": false
   },
   "sigma": {
     "drawingProperties": {
-      "defaultEdgeType": "curve",
+      "defaultEdgeType": "line",
       "defaultHoverLabelBGColor": "#002147",
       "defaultLabelBGColor": "#ddd",
       "activeFontStyle": "bold",
       "defaultLabelColor": "#000",
-      "labelThreshold": 10,
+      "labelThreshold": 80,
       "defaultLabelHoverColor": "#fff",
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
-      "defaultLabelSize": 14
+      "defaultLabelSize": 14,
+      "batchEdgesDrawing": "true",
+      "canvasEdgesBatchSize": "5",
+      "webglEdgesBatchSize": "10",
+      "hideEdgesOnMove": "true",
+      "labelSize": "proportional"
     },
     "graphProperties": {
-      "maxEdgeSize": 0.5,
-      "minEdgeSize": 0.2,
-      "minNodeSize": 1,
-      "maxNodeSize": 7
+      "maxEdgeSize": 2,
+      "minEdgeSize": 0.5,
+      "minNodeSize": 0.001,
+      "maxNodeSize": 1
     },
     "mouseProperties": {
       "maxRatio": 20,

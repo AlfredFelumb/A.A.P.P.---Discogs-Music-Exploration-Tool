@@ -44,7 +44,7 @@ Object.size = function(obj) {
 };
 
 function initSigma(config) {
-	var data=config.data
+	var data=config.data //data.json filen
 	
 	var drawProps, graphProps,mouseProps;
 	if (config.sigma && config.sigma.drawingProperties) 
@@ -57,10 +57,10 @@ function initSigma(config) {
         defaultHoverLabelBGColor: "#002147",
         defaultLabelHoverColor: "#fff",
         labelThreshold: 10,
-        defaultEdgeType: "curve",
+        defaultEdgeType: "straight",
         hoverFontStyle: "bold",
         fontStyle: "bold",
-        activeFontStyle: "bold"
+        activeFontStyle: "bold"  
     };
     
     if (config.sigma && config.sigma.graphProperties)	
@@ -434,16 +434,10 @@ function nodeNormal() {
     }), sigInst.draw(2, 2, 2, 2), sigInst.neighbors = {}, sigInst.active = !1, $GP.calculating = !1, window.location.hash = "")
 }
 
-function nodeActive(a) {
 
-	var groupByDirection=false;
-	if (config.informationPanel.groupByEdgeDirection && config.informationPanel.groupByEdgeDirection==true)	groupByDirection=true;
-	
-    sigInst.neighbors = {};
-    sigInst.detail = !0;
-    var b = sigInst._core.graph.nodesIndex[a];
-    showGroups(!1);
-	var outgoing={},incoming={},mutual={};//SAH
+function findNeighborsAndNeighborsNeighbors(a)
+{
+    incoming={},outgoing={};
     sigInst.iterEdges(function (b) {
         b.attr.lineWidth = !1;
         b.hidden = !0;
@@ -453,11 +447,56 @@ function nodeActive(a) {
             colour: b.color
         };
         
-   	   if (a==b.source) outgoing[b.target]=n;		//SAH
-	   else if (a==b.target) incoming[b.source]=n;		//SAH
-       if (a == b.source || a == b.target) sigInst.neighbors[a == b.target ? b.source : b.target] = n;
+   	  
+       if (a == b.source || a == b.target) 
+       {
+        var neighborNode = a == b.target ? b.source : b.target
+        if (a==b.source) outgoing[neighborNode]=n;
+	    else incoming[neighborNode]=n;
+        
+        sigInst.neighbors[neighborNode] = n;
+        
+
+        // neighbors neighbors
+        sigInst.iterEdges(function (c) {
+            c.attr.lineWidth = !1;
+            c.hidden = !0;
+            
+            n={
+                name: c.label,
+                colour: c.color
+            };
+            
+            if (neighborNode==c.source) outgoing[c.target]=n;
+            else if (neighborNode==c.target) incoming[c.source]=n;
+            if (neighborNode == c.source || neighborNode == c.target) 
+            {
+                sigInst.neighbors[neighborNode == c.target ? c.source : c.target] = n;
+            }
+           c.hidden = !1, c.attr.color = "rgba(0, 0, 0, 1)";
+        });
+
+       }
        b.hidden = !1, b.attr.color = "rgba(0, 0, 0, 1)";
     });
+    return [incoming,outgoing];
+}
+
+function nodeActive(a) {
+
+	var groupByDirection=false;
+	if (config.informationPanel.groupByEdgeDirection && config.informationPanel.groupByEdgeDirection==true)	groupByDirection=true;
+	
+    sigInst.neighbors = {};
+    sigInst.detail = !0;
+    var b = sigInst._core.graph.nodesIndex[a];
+    showGroups(!1);
+
+    var outgoing={},incoming={},mutual={};
+	var arrs = findNeighborsAndNeighborsNeighbors(a);
+    incoming = arrs[0];
+    outgoing = arrs[1];
+
     var f = [];
     sigInst.iterNodes(function (a) {
         a.hidden = !0;
@@ -468,7 +507,6 @@ function nodeActive(a) {
     if (groupByDirection) {
 		//SAH - Compute intersection for mutual and remove these from incoming/outgoing
 		for (e in outgoing) {
-			//name=outgoing[e];
 			if (e in incoming) {
 				mutual[e]=outgoing[e];
 				delete incoming[e];
@@ -561,10 +599,14 @@ function nodeActive(a) {
         temp_array = [];
         g = 0;
         for (var attr in f.attributes) {
+
             var d = f.attributes[attr],
                 h = "";
 			if (attr!=image_attribute) {
-                h = '<span><strong>' + attr + ':</strong> ' + d + '</span><br/>'
+                if(attr == "url"){
+                    
+                    h = '<span><strong>' + attr + ':</strong> <a href='+ d + '>Go to Discogs</a>' 
+                } else h = '<span><strong>' + attr + ':</strong> ' + d + '</span><br/>'
 			}
             //temp_array.push(f.attributes[g].attr);
             e.push(h)
