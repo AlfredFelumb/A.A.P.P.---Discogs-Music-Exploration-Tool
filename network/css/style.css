@@ -392,11 +392,12 @@ padding-top: 1em;
 }
 
 #mainpanel dt {
-width: 20px;
-height: 20px;
+width: 18px;
+height: 18px;
 float: left;
 background-repeat: no-repeat;
 background-image: url('../images/sprite.png');
+
 }
 
 #legend dl {
@@ -416,18 +417,30 @@ margin-bottom: 12px;
 }
 
 #mainpanel .node {
-background-position: -11px -119px;
+background-position: -510px -1220px;
 }
 
 #mainpanel .edge {
-background-position: -51px -122px;
+background-position: -53px -123px;
+margin-bottom: -5px;
 }
 
 #mainpanel .colours {
-
+width: 20px;
+height: 40px;
 background-image:url('../images/rainbow.png');
-
+margin-top: 1.5px;
+margin-left: -6px;
+margin-right: 5.2px;
+margin-bottom:8px;
 }
+
+#mainpanel .releasecolor {
+
+background-image:url('../images/releasecolor.png');
+
+}	
+
 #legend .note {
 margin-bottom: 8px;
 

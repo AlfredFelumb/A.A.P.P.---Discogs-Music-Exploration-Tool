@@ -1,26 +1,27 @@
 {
   "type": "network",
   "version": "1.0",
-  "data": "classic openord.json",
+  "data": "data.json",
   "logo": {
-    "file": "",
+    "file": "https://media.discordapp.net/attachments/808294432586989588/855784063121096744/Powered_by.png?width=180&height=100", 
     "link": "",
     "text": "A. Felumb"
   },
   "text": {
-    "more": "",
-    "intro": "",
-    "title": "Discogs Music Exploration Tool"
+    "intro": "This visualization has been developed in conjunction with a project group at Techno-Anthropology on Aalborg University, Copenhagen. <a target=\"_blank\" href=\"https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool\">Github.<a>",
+    "more": "Network of electronic music releases on 12'' vinyl from www.discogs.com with connections to acompanying artists and labels. It's recommended that you explore the network by searching for a specific release, artist, or label. Using the search function, you get a given node with edge links out to a depth of 2.", 
+    "title": "<br> Discogs Electronic Music Exploration Tool"
   },
   "legend": {
-    "edgeLabel": "Artist/Label",
-    "colorLabel": "Modularity Class",
-    "nodeLabel": "Release"
+    "edgeLabel": "",
+    "colorLabel": "Releases <br> Labels <br> Artists",
+    "nodeLabel": "\n",
+    "releasecolor": "Release" 
   },
   "features": {
     "search": true,
     "groupSelectorAttribute": false,
-    "hoverBehavior": "default"
+    "hoverBehavior": "dim"
   },
   "informationPanel": {
     "groupByEdgeDirection": false,
@@ -33,26 +34,27 @@
       "defaultLabelBGColor": "#ddd",
       "activeFontStyle": "bold",
       "defaultLabelColor": "#000",
-      "labelThreshold": 80,
+      "labelThreshold": 2,
       "defaultLabelHoverColor": "#fff",
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
-      "defaultLabelSize": 14,
+      "defaultLabelSize": 18,
       "batchEdgesDrawing": "true",
-      "canvasEdgesBatchSize": "5",
+      "canvasEdgesBatchSize": "50",
       "webglEdgesBatchSize": "10",
-      "hideEdgesOnMove": "true",
-      "labelSize": "proportional"
+      "hideEdgesOnMove": "false",
+      "labelSize": "fixed",
+      "labelSizeRatio": "2"
     },
     "graphProperties": {
-      "maxEdgeSize": 2,
-      "minEdgeSize": 0.5,
-      "minNodeSize": 0.001,
+      "maxEdgeSize": 3,
+      "minEdgeSize": 1,
+      "minNodeSize": 1,
       "maxNodeSize": 1
     },
     "mouseProperties": {
       "maxRatio": 20,
-      "minRatio": 0.75
+      "minRatio": 0.0001
     }
   }
 }

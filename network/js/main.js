@@ -1,3 +1,5 @@
+//<script src="sigma/plugins/sigma.forceatlas2.js"></script>
+
 var sigInst, canvas, $GP
 
 //Load configuration file
@@ -170,6 +172,13 @@ function setupGUI(config) {
 		//hide more information link
 		$(".colours").hide();
 	}
+    // Release Color
+        if (config.legend.releasecolor) {
+        $(".releasecolor").next().html(config.legend.releasecolor);
+    } else {
+        //hide more information link
+        $(".releasecolors").hide();
+    }
 
 	$GP = {
 		calculating: !1,
@@ -650,6 +659,19 @@ function showCluster(a) {
         }
         sigInst.clusters[a] = e;
         sigInst.draw(2, 2, 2, 2);
+      //  sigInst.startForceAtlas2();
+      //  var isRunning = true;
+       // document.getElementById('stop-layout').addEventListener('click',function(){
+          //  if(isRunning){
+          //      isRunning = false;
+           //     sigInst.stopForceAtlas2();
+           //     document.getElementById('stop-layout').childNodes[0].nodeValue = 'Start Layout';
+           // }else{
+           //     isRunning = true;
+           //     sigInst.startForceAtlas2();
+          //      document.getElementById('stop-layout').childNodes[0].nodeValue = 'Stop Layout';
+          //  }
+        //},true);
         $GP.info_name.html("<b>" + a + "</b>");
         $GP.info_data.hide();
         $GP.info_p.html("Group Members:");
