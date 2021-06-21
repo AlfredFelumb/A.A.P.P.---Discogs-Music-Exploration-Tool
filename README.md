@@ -4,9 +4,12 @@ This github is part of an ongoing process to develop an exploration tool for ele
 
 [Discogs Music Exploration Tool - Web Application Prototype](https://alfredfelumb.github.io/A.A.P.P.---Discogs-Music-Exploration-Tool/network/)
 
-Authors
+## Project Authors
 
 - [Alexander Siegfried](https://www.linkedin.com/in/alexander-siegfried-81b544b0/)
 - [Alfred Felumb](https://www.linkedin.com/in/alfred-lund-felumb-535b76181/)
 - [Peter Zinck](https://www.linkedin.com/in/peter-zinck-munksgaard-531a3aa1/)
-- [Poppy Jones](https://www.linkedin.com/in/alexander-siegfried-81b544b0/)
+
+## Programmer
+
+- [Poppy Jones](https://www.linkedin.com/in/poppy-jones-926770194/)
