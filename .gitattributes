@@ -1,3 +1,0 @@
-network/data.json filter=lfs diff=lfs merge=lfs -text
-network/classic[[:space:]]openord.json filter=lfs diff=lfs merge=lfs -text
-network/classic[[:space:]]linlog[[:space:]]s10.json filter=lfs diff=lfs merge=lfs -text
