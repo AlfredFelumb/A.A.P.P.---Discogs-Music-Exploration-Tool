@@ -54,7 +54,8 @@
     },
     "mouseProperties": {
       "maxRatio": 20,
-      "minRatio": 0.0001
+      "minRatio": 0.0001,
+      "edgeHoverPrecision": 10
     }
   }
 }

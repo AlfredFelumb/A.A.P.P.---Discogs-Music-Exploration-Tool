@@ -614,7 +614,7 @@ function nodeActive(a) {
 			if (attr!=image_attribute) {
                 if(attr == "Link"){
                     
-                    h = '<span><strong>' + attr + ':</strong> <a href='+ d + '>Go to Discogs</a>' 
+                    h = '<span><strong>' + attr + ':</strong> <a href='+ d + '>Go to Discogs</a><br/>'
                 } else h = '<span><strong>' + attr + ':</strong> ' + d + '</span><br/>'
 			}
             //temp_array.push(f.attributes[g].attr);
