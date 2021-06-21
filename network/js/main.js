@@ -612,7 +612,7 @@ function nodeActive(a) {
             var d = f.attributes[attr],
                 h = "";
 			if (attr!=image_attribute) {
-                if(attr == "url"){
+                if(attr == "Link"){
                     
                     h = '<span><strong>' + attr + ':</strong> <a href='+ d + '>Go to Discogs</a>' 
                 } else h = '<span><strong>' + attr + ':</strong> ' + d + '</span><br/>'
