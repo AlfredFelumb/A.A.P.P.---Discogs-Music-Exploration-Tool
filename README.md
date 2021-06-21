@@ -14,6 +14,7 @@ This github is part of an ongoing process to develop an exploration tool for ele
 
 - [Poppy Jones](https://www.linkedin.com/in/poppy-jones-926770194/)
 
+
 Template provided by InteractiveVis project
 
 http://blogs.oii.ox.ac.uk/vis/
@@ -22,3 +23,5 @@ https://github.com/oxfordinternetinstitute/InteractiveVis/
 
 
 ### Powered by [Discogs](https://www.discogs.com/)
+
+Article coming soon!
