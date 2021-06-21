@@ -1,14 +1,14 @@
 {
   "type": "network",
   "version": "1.0",
-  "data": "https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool/blob/main/network/data.json",
+  "data": "https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool/raw/main/network/data.json",
   "logo": {
     "file": "https://media.discordapp.net/attachments/808294432586989588/855784063121096744/Powered_by.png?width=180&height=100", 
     "link": "",
     "text": "A. Felumb"
   },
   "text": {
-    "intro": "This visualization has been developed in conjunction with a project group at Techno-Anthropology on Aalborg University, Copenhagen. <a target=\"_blank\" href=\"https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool\">Github.<a> \n version 0.2",
+    "intro": "This visualization has been developed in conjunction with a project group at Techno-Anthropology on Aalborg University, Copenhagen. <a target=\"_blank\" href=\"https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool\">Github.<a> \n version 0.3",
     "more": "Network of electronic music releases on 12'' vinyl from www.discogs.com with connections to acompanying artists and labels. It's recommended that you explore the network by searching for a specific release, artist, or label. Using the search function, you get a given node with edge links out to a depth of 2.", 
     "title": "<br> Discogs Electronic Music Exploration Tool"
   },
