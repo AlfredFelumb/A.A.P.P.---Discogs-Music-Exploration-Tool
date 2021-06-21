@@ -8,7 +8,7 @@
     "text": "A. Felumb"
   },
   "text": {
-    "intro": "This visualization has been developed in conjunction with a project group at Techno-Anthropology at Aalborg University, Copenhagen. <a target=\"_blank\" href=\"https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool\">Github.<a> \n Version 0.1",
+    "intro": "This visualization has been developed in conjunction with a project group at Techno-Anthropology at Aalborg University, Copenhagen. <a target=\"_blank\" href=\"https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool\">Github.<a> \n Version 0.2",
     "more": "Network of electronic music releases on 12'' vinyl from www.discogs.com with connections to accompanying  artists and labels. It's recommended that you explore the network by searching for a specific release, artist, or label. Using the search function, you get a given node with edge links out to a depth of 2. \n The network has 186131 nodes and 324915 edges. The network was also reduced to only include nodes with 3 or more connections, to accomodate Github file storage limitations.", 
     "title": "<br> Discogs Electronic Music Exploration Tool"
   },
