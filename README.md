@@ -4,7 +4,7 @@ This github is part of an ongoing process to develop an exploration tool for ele
 
 [Discogs Music Exploration Tool - Web Application Prototype](https://alfredfelumb.github.io/A.A.P.P.---Discogs-Music-Exploration-Tool/network/)
 
-[Article about the Project] (https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool/blob/main/Exploring%20Electronic%20Music.pdf) 
+[Article about the Project](https://github.com/AlfredFelumb/A.A.P.P.---Discogs-Music-Exploration-Tool/blob/main/Exploring%20Electronic%20Music.pdf) 
 
 ## Project Authors
 
