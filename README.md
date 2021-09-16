@@ -25,5 +25,3 @@ https://github.com/oxfordinternetinstitute/InteractiveVis/
 
 
 ### Powered by [Discogs](https://www.discogs.com/)
-
-Article coming soon!
